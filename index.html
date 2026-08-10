@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVolution - Mobil Listrik Indonesia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">EV<span>olution</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="#booking" class="btn-nav">Booking Test Drive</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Masa Depan Berkendara<br>Dimulai Hari Ini</h1>
+            <p>Jelajahi koleksi mobil listrik terbaik dengan teknologi ramah lingkungan dan performa tinggi</p>
+            <a href="katalog.html" class="cta-button">Jelajahi Katalog</a>
+        </div>
+    </section>
+
+    <!-- Keunggulan EV -->
+    <section class="keunggulan">
+        <div class="container">
+            <h2>Mengapa Memilih Mobil Listrik?</h2>
+            <div class="grid-keunggulan">
+                <div class="card-keunggulan">
+                    <div class="icon">🌱</div>
+                    <h3>Ramah Lingkungan</h3>
+                    <p>Zero emisi gas buang, membantu mengurangi polusi udara dan jejak karbon Anda</p>
+                </div>
+                <div class="card-keunggulan">
+                    <div class="icon">💰</div>
+                    <h3>Biaya Operasional Rendah</h3>
+                    <p>Biaya pengisian daya jauh lebih hemat dibandingkan bahan bakar fosil</p>
+                </div>
+                <div class="card-keunggulan">
+                    <div class="icon">⚡</div>
+                    <h3>Performa Instan</h3>
+                    <p>Torsi maksimal tersedia sejak putaran rendah, akselerasi responsif</p>
+                </div>
+                <div class="card-keunggulan">
+                    <div class="icon">🔧</div>
+                    <h3>Perawatan Minimal</h3>
+                    <p>Komponen lebih sederhana, bebas oli mesin dan perawatan rutin yang kompleks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobil Unggulan -->
+    <section class="unggulan">
+        <div class="container">
+            <h2>Mobil Unggulan Kami</h2>
+            <div class="grid-produk" id="produkUnggulan">
+                <!-- Akan diisi oleh JavaScript -->
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="katalog.html" class="cta-button">Lihat Semua Mobil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Booking -->
+    <section class="cta-booking" id="booking">
+        <div class="container">
+            <h2>Siap Merasakan Sensasi Mobil Listrik?</h2>
+            <p>Booking test drive sekarang dan rasakan sendiri pengalaman berkendara tanpa emisi</p>
+            <a href="#form-booking" class="cta-button">Booking Test Drive</a>
+        </div>
+    </section>
+
+    <!-- Form Booking Test Drive -->
+    <section class="form-section" id="form-booking">
+        <div class="container">
+            <h2>Form Booking Test Drive</h2>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap *</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="model">Model Pilihan *</label>
+                    <select id="model" name="model" required>
+                        <option value="">Pilih model mobil</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tanggal">Tanggal Test Drive *</label>
+                    <input type="date" id="tanggal" name="tanggal" required min="">
+                </div>
+                
+                <button type="submit" class="cta-button">Kirim Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 EVolution - Mobil Listrik Indonesia. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
