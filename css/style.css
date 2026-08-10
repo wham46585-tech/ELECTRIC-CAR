@@ -1,0 +1,559 @@
+/* ==================== RESET & BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hijau-tua: #1B4332;
+    --hijau: #2D6A4F;
+    --hijau-muda: #40916C;
+    --hijau-terang: #52B788;
+    --hijau-pastel: #95D5B2;
+    --hijau-sangat-pastel: #D8F3DC;
+    --putih: #FFFFFF;
+    --abu-muda: #F8F9FA;
+    --abu: #E9ECEF;
+    --abu-tua: #6C757D;
+    --hitam: #212529;
+    
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --shadow: 0 2px 15px rgba(0,0,0,0.1);
+    --shadow-hover: 0 5px 25px rgba(0,0,0,0.15);
+    --radius: 10px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--hitam);
+    line-height: 1.6;
+    background-color: var(--putih);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==================== NAVIGASI ==================== */
+.navbar {
+    background-color: var(--putih);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--hijau-tua);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--hijau-muda);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--hitam);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--hijau);
+    border-bottom-color: var(--hijau);
+}
+
+.btn-nav {
+    background-color: var(--hijau);
+    color: var(--putih) !important;
+    padding: 10px 20px !important;
+    border-radius: 25px;
+    border-bottom: none !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--hijau-tua);
+    transform: translateY(-2px);
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    background: linear-gradient(135deg, var(--hijau-tua), var(--hijau-muda));
+    color: var(--putih);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* ==================== BUTTONS ==================== */
+.cta-button {
+    display: inline-block;
+    background-color: var(--putih);
+    color: var(--hijau-tua);
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    background-color: var(--hijau-sangat-pastel);
+}
+
+/* ==================== KEUNGGULAN ==================== */
+.keunggulan {
+    padding: 80px 0;
+    background-color: var(--abu-muda);
+}
+
+.keunggulan h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: var(--hijau-tua);
+}
+
+.grid-keunggulan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card-keunggulan {
+    background: var(--putih);
+    padding: 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card-keunggulan:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-keunggulan .icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.card-keunggulan h3 {
+    color: var(--hijau-tua);
+    margin-bottom: 15px;
+}
+
+/* ==================== PRODUK GRID ==================== */
+.unggulan,
+.katalog-grid {
+    padding: 80px 0;
+}
+
+.unggulan h2,
+.katalog-header h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: var(--hijau-tua);
+}
+
+.grid-produk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-produk {
+    background: var(--putih);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.card-produk:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-produk img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-produk .info {
+    padding: 20px;
+}
+
+.card-produk h3 {
+    color: var(--hijau-tua);
+    margin-bottom: 10px;
+}
+
+.card-produk .merek {
+    color: var(--abu-tua);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-produk .harga {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--hijau-muda);
+    margin-bottom: 10px;
+}
+
+.card-produk .jarak {
+    color: var(--abu-tua);
+    font-size: 14px;
+}
+
+.card-produk .btn-detail {
+    display: inline-block;
+    background-color: var(--hijau);
+    color: var(--putih);
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: var(--transition);
+}
+
+.card-produk .btn-detail:hover {
+    background-color: var(--hijau-tua);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ==================== CTA BOOKING ==================== */
+.cta-booking {
+    background: linear-gradient(135deg, var(--hijau), var(--hijau-muda));
+    color: var(--putih);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-booking h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-booking p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* ==================== FORM ==================== */
+.form-section {
+    padding: 80px 0;
+    background-color: var(--abu-muda);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: var(--hijau-tua);
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--putih);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--hijau-tua);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--abu);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--font-family);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--hijau-muda);
+}
+
+.booking-form .cta-button {
+    width: 100%;
+    background-color: var(--hijau);
+    color: var(--putih);
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.booking-form .cta-button:hover {
+    background-color: var(--hijau-tua);
+}
+
+/* ==================== KATALOG HEADER ==================== */
+.katalog-header {
+    background: linear-gradient(135deg, var(--hijau-tua), var(--hijau-muda));
+    color: var(--putih);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.katalog-header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.katalog-header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ==================== FILTER ==================== */
+.filter-section {
+    padding: 30px 0;
+    background-color: var(--putih);
+    border-bottom: 1px solid var(--abu);
+}
+
+.filter-bar {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: var(--hijau-tua);
+}
+
+.filter-group select {
+    padding: 10px 20px;
+    border: 2px solid var(--abu);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--hijau-muda);
+}
+
+/* ==================== DETAIL PRODUK ==================== */
+.detail-produk {
+    padding: 80px 0;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.galeri {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.galeri img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.spesifikasi {
+    padding: 20px 0;
+}
+
+.spesifikasi h1 {
+    font-size: 36px;
+    color: var(--hijau-tua);
+    margin-bottom: 10px;
+}
+
+.spesifikasi .merek-detail {
+    color: var(--abu-tua);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.spesifikasi .harga-detail {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--hijau-muda);
+    margin-bottom: 30px;
+}
+
+.spec-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.spec-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--abu);
+    display: flex;
+    justify-content: space-between;
+}
+
+.spec-list li span:first-child {
+    font-weight: 600;
+    color: var(--hijau-tua);
+}
+
+.btn-booking {
+    display: inline-block;
+    background-color: var(--hijau);
+    color: var(--putih);
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-booking:hover {
+    background-color: var(--hijau-tua);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background-color: var(--hijau-tua);
+    color: var(--putih);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .detail-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-menu {
+        gap: 15px;
+    }
+    
+    .nav-menu a {
+        font-size: 14px;
+    }
+    
+    .grid-produk {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .booking-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
